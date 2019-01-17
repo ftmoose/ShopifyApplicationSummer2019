@@ -58,7 +58,7 @@ That's it! Checkout the app on http://localhost:3000
 
 The app's api is build with graphql.  [Graphiql](https://github.com/graphql/graphiql) is enabled by default, you can make all api calls and queries from there.
 
-If you have the application running locally, visit localhost:3000/graphql to run queries or mutations
+If you have the application running locally, visit [localhost:3000/graphql](localhost:3000/graphql) to run queries or mutations
 
 ### Product
 
