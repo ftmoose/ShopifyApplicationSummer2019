@@ -4,12 +4,8 @@
 * [Prerequisites](#prerequisites)
 * [Installing](#installing)
 * [Interfacing with the API](#api)
-    * [Shops](#shops)
-    * [Orders](#orders)
-    * [Products](#products)
-    * [Line Items](#line-items)
-* [Tests](#tests)
-* [Known Issues](#known-issues)
+    * [Product](#product)
+    * [Cart](#cart)
 
 ## Getting Started
 
