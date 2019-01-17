@@ -83,6 +83,45 @@ Mutations:
 createProduct(title: String!, price: Float!, inventory_count: Int!): ProductObject
 ```
 
+Example queries/mutations:
+```
+query($product_id:String!){
+    getProductById(product_id:$product_id) {
+        _id
+        title
+        price
+        inventory_count
+    }
+}
+
+query($product_title:String!){
+    getProductByTitle(product_title:$product_title) {
+        _id
+        title
+        price
+        inventory_count
+    }
+}
+
+query($filter_no_inventory:Boolean!){
+    getAllProducts(filter_no_inventory:$filter_no_inventory) {
+        _id
+        title
+        price
+        inventory_count
+    }
+}
+
+mutation($title: String!, $price: Float!, $inventory_count: Int!) {
+    createProduct(title:$title, price:$price, inventory_count:$inventory_count){
+        _id
+        title
+        price
+        inventory_count
+    }
+}
+```
+
 ### Cart
 
 ```
@@ -107,7 +146,52 @@ removeProductFromCart(product_id: String!, cart_id: String!, qty: Int!): CartObj
 completeCart(cart_id: String!): CartObject
 ```
 
+Example queries/mutations:
+```
+query($cart_id:String!){
+    getCart(cart_id:$cart_id) {
+        completed
+        items
+        _id
+    }
+}
 
+mutation {
+    createCart{
+        _id
+        items
+        total
+        completed
+    }
+}
+
+mutation($product_id:String!, $cart_id:String!, $qty:Int!){
+    addProductToCart(product_id:$product_id, cart_id:$cart_id, qty:$qty){
+        _id
+        items
+        total
+        completed
+    }
+}
+
+mutation($product_id:String!, $cart_id:String!, $qty:Int!){
+    removeProductFromCart(product_id:$product_id, cart_id:$cart_id, qty:$qty){
+        _id
+        items
+        total
+        completed
+    }
+}
+
+mutation($cart_id:String!){
+    completeCart(cart_id:$cart_id) {
+        completed
+        items
+        total
+        _id
+    }
+}
+```
 
 
 
